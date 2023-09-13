@@ -1,3 +1,4 @@
+package src;
 import src.ProductSorter;
 
 /**
@@ -19,7 +20,21 @@ public class Main {
                 new Product(4, "Camera", 3.9f, 500.00),
                 new Product(5, "Headphones", 4.2f, 50.00),
         };
-
+        
+      //*****************************************************************************  
+      //*****************************************************************************
+        Product[] array10 = Product.generateProducts(100,"TV"); 
+        Product[] array100 = Product.generateProducts(100,"TV");
+        Product[] array1000 = Product.generateProducts(100,"TV");
+       
+        
+        //uncomment to test 
+        ProductSorter.sortAndDisplay(array10, "Price");
+       // ProductSorter.sortAndDisplay(array100, "Price");
+        //ProductSorter.sortAndDisplay(array1000, "Price");
+      //***************************************************************************** 
+      //*****************************************************************************
+        
         System.out.println("Sorting by Name: (alphabetical)");
         ProductSorter.sortAndDisplay(products, "Name");
         System.out.println();
@@ -31,4 +46,5 @@ public class Main {
         System.out.println("Sorting by Price: (lowest)");
         ProductSorter.sortAndDisplay(products, "Price");
     }
+	
 }
