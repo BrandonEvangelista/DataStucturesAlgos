@@ -21,20 +21,28 @@ public class Main {
                 new Product(5, "Headphones", 4.2f, 50.00),
         };
         
-      //*****************************************************************************  
-      //*****************************************************************************
-        Product[] array10 = Product.generateProducts(100,"TV"); 
-        Product[] array100 = Product.generateProducts(100,"TV");
-        Product[] array1000 = Product.generateProducts(100,"TV");
-       
-        
-        //uncomment to test 
-        System.out.println("Sorting by Price: (lowest)");
-        ProductSorter.sortAndDisplay(array10, "Price");
-       // ProductSorter.sortAndDisplay(array100, "Price");
-        //ProductSorter.sortAndDisplay(array1000, "Price");
-      //***************************************************************************** 
-      //*****************************************************************************
+        //*****************************************************************************  
+        //*****************************************************************************
+          Product[] array10 = Product.generateProducts(10,"TV"); 
+          Product[] array100 = Product.generateProducts(100,"TV");
+          Product[] array1000 = Product.generateProducts(1000,"TV");
+         
+          long startTime = System.currentTimeMillis();
+          //uncomment to test 
+          System.out.println("Sorting by Price: (lowest)");
+          
+          //ProductSorter.sortAndDisplay(array10, "Price");
+          
+          //ProductSorter.sortAndDisplay(array100, "Price");
+          
+          ProductSorter.sortAndDisplay(array1000, "Price");
+          long endTime = System.currentTimeMillis();
+          long executionTime = endTime - startTime;
+          System.out.println("QuickSort @ 1000 items"); 
+          System.out.println("Execution Time (milliseconds): " + executionTime);
+          
+        //***************************************************************************** 
+        //*****************************************************************************
         
         System.out.println("Sorting by Name: (alphabetical)");
         ProductSorter.sortAndDisplay(products, "Name");
